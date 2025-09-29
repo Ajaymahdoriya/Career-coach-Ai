@@ -109,3 +109,18 @@ Run Prisma Studio for quick inspection:
 - Sign-in/up routes under app/(auth)
 - SignedIn/SignedOut components used in the Header
 
+## AI Integrations
+
+- Google Generative AI (Gemini 1.5 Flash)
+    - actions/cover-letter.js: generateCoverLetter
+    - actions/interview.js: generateQuiz + improvement tips
+    - actions/resume.js: improveWithAI for descriptions
+    - actions/dashboard.js + lib/inngest/function.js: industry insights JSON
+
+Note: Ensure GEMINI_API_KEY is set and billing/quota allows usage.
+
+## Background Jobs (Inngest)
+
+- Cron “Generate Industry Insights” runs weekly (Sunday midnight) to refresh insights
+- Handler: app/api/inngest/route.js
+- Function: lib/inngest/function.js
