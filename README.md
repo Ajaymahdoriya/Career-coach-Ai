@@ -132,3 +132,17 @@ Note: Ensure GEMINI_API_KEY is set and billing/quota allows usage.
 - Editor/Preview: @uiw/react-md-editor for cover letters and resume
 - PDF Export: html2pdf.js
 - UX: Sonner toasts, Radix primitives, Tailwind theming (light/dark)
+
+## Key Flows
+
+- Onboarding
+    - app/(main)/onboarding: select industry and specialization; profile saved via actions/user.updateUser
+    - Generates IndustryInsight if not present using AI
+- Dashboard
+    - app/(main)/dashboard: fetches IndustryInsight and renders cards, chart, trends, skills
+- Resume
+    - Build from structured form; live Markdown; AI “Improve” for descriptions; persist via actions/resume.saveResume; export PDF
+- Cover Letters
+    - Create from company, role, JD; AI generates markdown; list/manage letters
+- Interview
+    - Generate industry/skill-based quiz; answer flow with explanations; save assessment; show results, stats, performance chart
