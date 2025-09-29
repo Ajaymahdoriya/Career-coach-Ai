@@ -49,3 +49,13 @@ A full-stack Next.js application that helps professionals accelerate their caree
 - prisma/ — Prisma schema and SQL migrations
 - public/ — Static assets (banner images)
 - Configs — Next, Tailwind, ESLint, PostCSS
+
+## Prerequisites
+
+- Node.js 18+
+- PostgreSQL database
+- API keys and secrets:
+    - CLERK_SECRET_KEY, NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+    - DATABASE_URL (PostgreSQL)
+    - GEMINI_API_KEY (Google Generative AI)
+    - INNGEST signing (optional for local; needed for production)
