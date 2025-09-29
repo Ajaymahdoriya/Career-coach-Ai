@@ -163,3 +163,19 @@ Note: Ensure GEMINI_API_KEY is set and billing/quota allows usage.
 - Tailwind CSS via @import in app/globals.css
 - Theming variables and dark mode supported
 - shadcn-style UI primitives in components/ui
+
+## Important Notes and Gotchas
+
+- Ensure Clerk domain and publishable key match the deployment URL
+- actions/user.updateUser currently returns result.user but the transaction returns { updatedUser, industryInsight } — consider returning the correct object shape for client checks
+- Industry linkage: User.industry references IndustryInsight.industry (string key); onboarding composes industry as ${industry}-${subIndustry.toLowerCase().replace(/ /g, "-")} — ensure consistency with insight  keys
+- AI outputs are parsed from model responses; code strips code fences before JSON.parse — handle errors gracefully
+- PDF generation renders a hidden Markdown block for clean export styling
+
+
+## Deployment
+
+- Recommended platforms: Vercel (Next.js), Neon/Railway/Supabase/Postgres for DB
+- Set environment variables on the platform
+- Run migrations on deploy (or CI/CD)
+- Ensure Clerk OAuth redirect URLs and Inngest routes are configured
