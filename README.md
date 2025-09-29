@@ -124,3 +124,11 @@ Note: Ensure GEMINI_API_KEY is set and billing/quota allows usage.
 - Cron “Generate Industry Insights” runs weekly (Sunday midnight) to refresh insights
 - Handler: app/api/inngest/route.js
 - Function: lib/inngest/function.js
+- To run Inngest locally, follow Inngest’s Next.js setup docs. In production, ensure the route is reachable and cron is configured.
+
+## Frontend Highlights
+
+- Charts: Recharts (BarChart for salaries, LineChart for performance)
+- Editor/Preview: @uiw/react-md-editor for cover letters and resume
+- PDF Export: html2pdf.js
+- UX: Sonner toasts, Radix primitives, Tailwind theming (light/dark)
