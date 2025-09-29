@@ -59,3 +59,34 @@ A full-stack Next.js application that helps professionals accelerate their caree
     - DATABASE_URL (PostgreSQL)
     - GEMINI_API_KEY (Google Generative AI)
     - INNGEST signing (optional for local; needed for production)
+ 
+## Environment Variables
+
+Create a .env.local file:
+
+- DATABASE_URL=postgres://USER:PASSWORD@HOST:PORT/DB
+- NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_xxx
+- CLERK_SECRET_KEY=sk_test_xxx
+- GEMINI_API_KEY=your_gemini_api_key
+- (Optional) Inngest related variables depending on deployment
+
+
+## Installation
+
+1) Install dependencies
+
+- npm install
+
+2) Generate Prisma client
+
+- npx prisma generate
+
+3) Run migrations
+
+- npx prisma migrate deploy
+- Or for development:
+    - npx prisma migrate dev
+
+4) Start the dev server
+
+- npm run dev
