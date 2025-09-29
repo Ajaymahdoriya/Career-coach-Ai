@@ -90,3 +90,22 @@ Create a .env.local file:
 4) Start the dev server
 
 - npm run dev
+
+## Database
+
+- Prisma models: User, Assessment, Resume, CoverLetter, IndustryInsight
+- Users are auto-created from Clerk on first request (lib/checkUser.js)
+- One Resume per user (unique userId)
+- IndustryInsight is referenced by User.industry (optional relationship)
+
+Run Prisma Studio for quick inspection:
+
+- npx prisma studio
+
+
+## Authentication
+
+- Clerk is initialized in app/layout.js via ClerkProvider
+- Sign-in/up routes under app/(auth)
+- SignedIn/SignedOut components used in the Header
+
