@@ -146,3 +146,20 @@ Note: Ensure GEMINI_API_KEY is set and billing/quota allows usage.
     - Create from company, role, JD; AI generates markdown; list/manage letters
 - Interview
     - Generate industry/skill-based quiz; answer flow with explanations; save assessment; show results, stats, performance chart
+ 
+## Commands
+
+- Development: npm run dev
+- Build: npm run build
+- Start: npm start
+- Lint: npm run lint
+- Prisma Studio: npx prisma studio
+- Migrate dev: npx prisma migrate dev
+- Migrate deploy: npx prisma migrate deploy
+
+
+## Tailwind \& Styling
+
+- Tailwind CSS via @import in app/globals.css
+- Theming variables and dark mode supported
+- shadcn-style UI primitives in components/ui
