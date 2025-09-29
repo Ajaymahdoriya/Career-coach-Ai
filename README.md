@@ -179,3 +179,20 @@ Note: Ensure GEMINI_API_KEY is set and billing/quota allows usage.
 - Set environment variables on the platform
 - Run migrations on deploy (or CI/CD)
 - Ensure Clerk OAuth redirect URLs and Inngest routes are configured
+
+
+## Security
+
+- Server Actions guard with Clerk auth; throws Unauthorized if no session
+- Prisma client reused across dev hot reloads
+- Do not commit .env files or secrets
+
+
+## Acknowledgements
+
+- Clerk for auth
+- Prisma for ORM
+- Google Generative AI for content generation
+- Inngest for background jobs
+- shadcn/radix for UI building blocks
+- Recharts and @uiw/react-md-editor for visualization and editing
