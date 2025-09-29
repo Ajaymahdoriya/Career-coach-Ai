@@ -34,3 +34,18 @@ A full-stack Next.js application that helps professionals accelerate their caree
 - Scheduler: Inngest
 - Misc: date-fns, html2pdf.js
 
+## Project Structure
+
+- actions/ — Server actions for cover letters, dashboard insights, interview, resume, and user profile
+- app/ — App Router pages and routes (auth, main sections, API, lib)
+    - (auth)/ — Sign-in/up (Clerk)
+    - (main)/ — Dashboard, Resume, Cover Letters, Interview, Onboarding
+    - api/inngest/route.js — Inngest handler
+    - lib/ — app-level helpers and schemas for forms
+- components/ — UI primitives and shared components (Header, ThemeProvider)
+- data/ — Static site content for the landing page
+- hooks/ — Custom hooks (useFetch)
+- lib/ — Prisma client, utils, Clerk user bootstrap, Inngest client/functions
+- prisma/ — Prisma schema and SQL migrations
+- public/ — Static assets (banner images)
+- Configs — Next, Tailwind, ESLint, PostCSS
