@@ -23,3 +23,14 @@ A full-stack Next.js application that helps professionals accelerate their caree
     - Explanations, scoring, analytics, improvement tip
     - History, stats cards, performance trend
 - Weekly auto-refresh of industry insights via Inngest cron
+
+## Tech Stack
+
+- Framework: Next.js (App Router), React, Server Actions
+- UI: Tailwind CSS, shadcn/radix primitives, Recharts, @uiw/react-md-editor, Sonner
+- Auth: Clerk
+- AI: Google Generative AI (Gemini 1.5 Flash)
+- DB/ORM: PostgreSQL + Prisma
+- Scheduler: Inngest
+- Misc: date-fns, html2pdf.js
+
